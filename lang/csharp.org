@@ -1,7 +1,7 @@
 * validator email 
 ** regex
 - hack obtained [[https://www.tutorialspoint.com/how-to-validate-an-email-address-in-chash][here]]
-#+BEGIN_SRC charp
+#+BEGIN_SRC csharp
 
 using System;
 using System.Text.RegularExpressions;
