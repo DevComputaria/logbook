@@ -1,0 +1,28 @@
+
+```cs
+
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		String barcode = String.Empty;
+		String digitableLine = "23794150099002296624769000211404300000000000000";
+
+            digitableLine = digitableLine.Replace(" ", "").Replace(".", "");
+
+            if (digitableLine.Length == 47)
+            {
+                string freeField = digitableLine.Remove(0, 3).Remove(0, 1).Remove(5, 1).Remove(15, 1).Remove(25, 2).Remove(25, 4).Remove(25, 10);
+                barcode = digitableLine.Substring(0, 3) + digitableLine.Substring(3, 1) + digitableLine.Substring(32, 1) + digitableLine.Substring(33, 4) + digitableLine.Substring(37, 10) + freeField;
+            }
+            else
+            {
+                string freeField = digitableLine.Remove(11, 1).Remove(22, 1).Remove(33, 1).Remove(44, 1).ToString();
+                barcode = freeField;
+            }
+		Console.WriteLine(barcode);
+	}
+}
+```
