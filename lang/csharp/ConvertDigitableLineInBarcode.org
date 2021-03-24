@@ -1,5 +1,5 @@
 
-```cs
+#+BEGIN_SRC csharp
 
 using System;
 					
@@ -25,4 +25,5 @@ public class Program
 		Console.WriteLine(barcode);
 	}
 }
-```
+
+#+END_SRC
